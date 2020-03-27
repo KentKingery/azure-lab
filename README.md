@@ -1,2 +1,2 @@
 # azure-lab
-Various demo bits and bobs for Azure
+Laboratory environment for testing Azure capabilities

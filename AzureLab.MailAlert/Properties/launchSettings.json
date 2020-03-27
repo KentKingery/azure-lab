@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "AzureLab.MailAlert": {
+      "commandName": "Project"
+    }
+  }
+}
