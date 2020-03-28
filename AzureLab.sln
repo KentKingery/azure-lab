@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureLab.MailAlert", "Azure
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureLab.APIProcessor", "AzureLab.APIProcessor\AzureLab.APIProcessor.csproj", "{1916F26F-5B65-4466-AD14-77118565BB4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureLab.LogAnalytics", "AzureLab.LogAnalytics\AzureLab.LogAnalytics.csproj", "{06AC0AC4-8190-4208-BD3E-EA4E783CF217}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureLab.LogAnalytics", "AzureLab.LogAnalytics\AzureLab.LogAnalytics.csproj", "{06AC0AC4-8190-4208-BD3E-EA4E783CF217}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureLab.TestAPI", "AzureLab.TestAPI\AzureLab.TestAPI.csproj", "{695DF1BE-DFBB-42F5-901F-C596A07D7DA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureLab.ServiceBus", "AzureLab.ServiceBus\AzureLab.ServiceBus.csproj", "{7B84FE09-CAC6-4044-8F6C-099BFC25D515}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{695DF1BE-DFBB-42F5-901F-C596A07D7DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{695DF1BE-DFBB-42F5-901F-C596A07D7DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{695DF1BE-DFBB-42F5-901F-C596A07D7DA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B84FE09-CAC6-4044-8F6C-099BFC25D515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B84FE09-CAC6-4044-8F6C-099BFC25D515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B84FE09-CAC6-4044-8F6C-099BFC25D515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B84FE09-CAC6-4044-8F6C-099BFC25D515}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
