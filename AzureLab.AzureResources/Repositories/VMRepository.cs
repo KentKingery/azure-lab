@@ -10,6 +10,7 @@ using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
 
 using AzureLab.AzureResources.Entities;
 using AzureLab.AzureResources.Interfaces;
+using AzureLab.AzureResources.Utility;
 
 
 namespace AzureLab.AzureResources.Repositories
@@ -17,21 +18,16 @@ namespace AzureLab.AzureResources.Repositories
     public class VMRepository
     {
 
-        private static AzureCredentials credentials = SdkContext.AzureCredentialsFactory.FromServicePrincipal("25436b99-13a3-4608-9dd0-1da85a2561bf", "aMsmvGWSd7bwXRxduf=7.g7mD5-IGhQ.", "10b07eba-f68b-403f-80c3-9c79c513279b", AzureEnvironment.AzureGlobalCloud);
-        private static IAzure azure;
+        public Platform Platform { get; set; }
 
         public VMRepository()
         {
-            azure = Azure.Configure()
-                         .WithLogLevel(HttpLoggingDelegatingHandler.Level.Basic)
-                         .Authenticate(credentials)
-                         .WithDefaultSubscription();
-
+            
         }
 
         public VM GetById(string id)
         {
-            var vm = azure.VirtualMachines.GetById(id);
+            var vm = Platform.Manager.VirtualMachines.GetById(id);
 
             VM result = new VM()
             {
@@ -47,7 +43,7 @@ namespace AzureLab.AzureResources.Repositories
         public IEnumerable<VM> List()
         {
             List<VM> result = new List<VM>();
-            var vmList = azure.VirtualMachines.List();
+            var vmList = Platform.Manager.VirtualMachines.List();
 
             foreach (var vm in vmList)
             {
