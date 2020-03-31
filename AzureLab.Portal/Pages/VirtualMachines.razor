@@ -1,0 +1,41 @@
+﻿@page "/virtualmachines"
+@using AzureLab.AzureResources.Entities
+@using AzureLab.AzureResources.Repositories
+
+<h1>Virtual Machines</h1>
+
+<table id="vm-table">
+    <tr>
+        <th>Server Name</th>
+        <th>IP Address</th>
+        <th>Resource Group</th>
+        <th>Power State</th>
+        <th colspan="2">Action</th>
+    </tr>
+    @foreach (var vm in @vmList)
+    {
+
+        <tr>
+            <td><span title="@vm.ResourceId">@vm.Name</span></td>
+            <td>@vm.IPAddress</td>
+            <td>@vm.ResourceGroupName</td>
+            <td>@vm.Status</td>
+            <td align="center" valign="middle"><input src="/images/stop-button.png" type="image" @onclick=@(() => StopVM(vm.ResourceId))/></td>
+            <td align="center" valign="middle"><input src="/images/start-button.png" type="image" @onclick=@(() => StartVM(vm.ResourceId)) /></td>
+        </tr>
+    }
+</table>
+
+@code {
+    private List<VM> vmList = new VMRepository().List().ToList();
+
+    private void StartVM(string vmId)
+    {
+        
+    }
+
+    private void StopVM(string vmId)
+    {
+        string x = "stop";
+    }
+}
